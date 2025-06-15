@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Haven</title>
+    <link rel='stylesheet' href='static/css/service_land.css'>
+</head>
+
+<body>
+    <header>
+        <h1>Pet Haven</h1>
+        <div class="switch-button">
+        </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="dog_spa.html">Dog Spa Services</a>
+        <a href="service_provider.html">Service Requests</a>
+
+        <div class="user-profile">
+            <img src="{{ url_for('static', filename='image/user_icon.png') }}" alt="User">
+            <span>Welcome, {{ user_name }}</span> <!-- Display the service provider's name -->
+            <div class="dropdown">
+                <a href="#">Profile</a>
+                <a href="{{ url_for('logout') }}">Logout</a> <!-- Ensure logout works -->
+            </div>
+        </div>
+        
+        </div>
+    </nav>
+
+    <div class="hero">
+        <h2>Welcome to Pet Haven</h2>
+        <p class="typewriter-text">Your one-stop destination for all things pet-related!</p>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <img src="../static/image/dog_spa.jpg" alt="Dog Spa">
+            <h3>Dog Spa Services</h3>
+            <p>Edit spa Services</p>
+            <a href="#">Edit Now</a>
+        </div>
+
+        <div class="card">
+            <img src="{{ url_for('static', filename='image/dog_competitions.jpg') }}" alt="Dog Competition">
+            <h3>Service Requests</h3>
+            <p>Accept or reject service requests</p>
+            <a href="{{ url_for('service_provider') }}">Check Now</a>
+        </div>
+        
+    </div>
+    <!-- Footer -->
+    <footer>
+        <p>Pet Haven</p>
+    </footer>
+</body>
+</html>
